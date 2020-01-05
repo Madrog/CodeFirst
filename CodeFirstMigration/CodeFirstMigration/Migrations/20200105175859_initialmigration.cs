@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
 
 namespace CodeFirstMigration.Migrations
 {
@@ -15,10 +13,10 @@ namespace CodeFirstMigration.Migrations
                 {
                     EmployeeId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     CompanyName = table.Column<string>(nullable: true),
-                    Designation = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    Designation = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
